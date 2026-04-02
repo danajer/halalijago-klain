@@ -18,20 +18,24 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.jago.com/cs-wa">
     
-    <!-- Open Graph / Facebook -->
+    <!-- ========== OPEN GRAPH / FACEBOOK - THUMBNAIL IMAGE ========== -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.jago.com/cs-wa">
+    <meta property="og:url" content="https://cs-jago.netlify.app/">
     <meta property="og:title" content="Bank Jago - Hubungi Customer Service WhatsApp">
-    <meta property="og:description" content="Layanan customer service Bank Jago via WhatsApp. Bantuan akun terblokir, lupa PIN, dan kendala transaksi. Resmi terdaftar OJK.">
-    <meta property="og:image" content="https://www.jago.com/images/og-image.jpg">
+    <meta property="og:description" content="Hubungi Customer Service Bank Jago via WhatsApp +62 821-9456-5774. Bantuan akun terblokir, lupa PIN, kendala transaksi 24 jam. Resmi terdaftar OJK.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/danajer/halalijago-klain/refs/heads/main/hq720.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Bank Jago Customer Service - Tanya Jago">
     <meta property="og:site_name" content="Bank Jago">
     <meta property="og:locale" content="id_ID">
     
-    <!-- Twitter Card -->
+    <!-- ========== TWITTER CARD - THUMBNAIL IMAGE ========== -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Bank Jago - Hubungi Customer Service WhatsApp">
-    <meta name="twitter:description" content="Layanan customer service Bank Jago via WhatsApp. Bantuan akun terblokir, lupa PIN, dan kendala transaksi.">
-    <meta name="twitter:image" content="https://www.jago.com/images/twitter-image.jpg">
+    <meta name="twitter:description" content="Layanan customer service Bank Jago via WhatsApp. Bantuan akun terblokir 24 jam.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/danajer/halalijago-klain/refs/heads/main/hq720.jpg">
+    <meta name="twitter:image:alt" content="Bank Jago Customer Service - Tanya Jago">
     
     <!-- Schema.org / Structured Data -->
     <script type="application/ld+json">
@@ -64,7 +68,7 @@
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Bank Jago Customer Service",
-        "image": "https://www.jago.com/images/brand/logo-jago.svg",
+        "image": "https://raw.githubusercontent.com/danajer/halalijago-klain/refs/heads/main/hq720.jpg",
         "telephone": "+6282194565774",
         "email": "halo@jago.com",
         "address": {
@@ -117,16 +121,320 @@
     <!-- Verification untuk Google Search Console -->
     <meta name="google-site-verification" content="verification_token_here">
     
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
-    
-    <!-- Preload critical assets -->
-    <link rel="preload" href="styles.css" as="style">
-    <link rel="preload" href="script.js" as="script">
-    
-    <!-- Security Headers via meta -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <!-- CSS Internal untuk tampilan yang optimal -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+            color: #1a2c3e;
+            line-height: 1.5;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #25D366;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+
+        .top-wa {
+            background: #075E54;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 16px 16px 0 0;
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+        .label {
+            font-size: 12px;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            opacity: 0.9;
+        }
+
+        .wa-number {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .wa-number a {
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #25D366;
+            padding: 10px 20px;
+            border-radius: 50px;
+            transition: transform 0.2s;
+        }
+
+        .wa-number a:hover {
+            transform: scale(1.02);
+            background: #128C7E;
+        }
+
+        .copy-btn {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: background 0.2s;
+        }
+        .copy-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .wa-icon {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        .wa-hint {
+            font-size: 12px;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 0 0 24px 24px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            max-width: 180px;
+            height: auto;
+        }
+
+        .title {
+            font-size: 24px;
+            text-align: center;
+            color: #075E54;
+            margin-bottom: 20px;
+        }
+
+        .bank-desc {
+            background: #f0f7f5;
+            padding: 20px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .bank-desc p {
+            margin-bottom: 10px;
+        }
+
+        .divider {
+            margin: 20px 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ccc, transparent);
+        }
+
+        .info-text {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+
+        .service-badge {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+        .btn-wa {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 16px 24px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-bottom: 20px;
+        }
+
+        .btn-wa:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37,211,102,0.3);
+        }
+
+        .footer-note {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 12px;
+            text-align: center;
+            color: #6c757d;
+        }
+
+        .contact-alt {
+            background: white;
+            padding: 15px;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .trust-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            background: white;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #075E54;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+
+        .faq-section {
+            background: white;
+            border-radius: 24px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .faq-section h2 {
+            font-size: 20px;
+            color: #075E54;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e9ecef;
+            padding-bottom: 15px;
+        }
+
+        .faq-item h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #1a2c3e;
+        }
+
+        .faq-item p {
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        /* Pilihan Masalah */
+        .problem-options {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .problem-options h4 {
+            margin-bottom: 12px;
+            color: #075E54;
+        }
+        .problem-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .problem-btn {
+            background: white;
+            border: 1px solid #25D366;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .problem-btn:hover {
+            background: #25D366;
+            color: white;
+        }
+        .status-active {
+            background: #e8f5e9;
+            padding: 8px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: #2e7d32;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+            .card {
+                padding: 20px;
+            }
+            .wa-number {
+                font-size: 20px;
+            }
+            .title {
+                font-size: 20px;
+            }
+            .btn-wa {
+                font-size: 16px;
+                padding: 14px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Skip to main content untuk aksesibilitas -->
@@ -145,6 +453,7 @@
                     </svg>
                     +62 821-9456-5774
                 </a>
+                <button class="copy-btn" id="copyNumberBtn">📋 Klik untuk copy nomor WhatsApp</button>
             </div>
             <div class="wa-hint">Klik nomor untuk chat langsung via WhatsApp | 24 Jam Layanan</div>
         </div>
@@ -153,7 +462,7 @@
         <main id="main-content">
             <div class="card">
                 <div class="logo">
-                    <img src="https://www.jago.com/images/brand/logo-jago.svg" alt="Bank Jago Logo - Bank Digital Terpercaya" width="180" height="56" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20180%2056%22%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%20dy%3D%22.35em%22%20fill%3D%22%23000%22%3EBank%20Jago%3C%2Ftext%3E%3C%2Fsvg%3E'">
+                    <img src="https://www.jago.com/images/brand/logo-jago.svg" alt="Bank Jago Logo - Bank Digital Terpercaya" width="180" height="56" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20180%2056%22%3E%3Crect%20width%3D%22180%22%20height%3D%2256%22%20fill%3D%22%23075E54%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20text-anchor%3D%22middle%22%20dy%3D%22.35em%22%20fill%3D%22white%22%20font-family%3D%22Arial%22%20font-size%3D%2216%22%3EBank%20Jago%3C%2Ftext%3E%3C%2Fsvg%3E'">
                 </div>
                 <h1 class="title">Hubungi Customer Service Bank Jago</h1>
                 
@@ -169,6 +478,21 @@
                     <strong>📞 Layanan Resmi Customer Service</strong><br>
                     Hubungi kami melalui WhatsApp untuk respon cepat dan terarah.<br>
                     <span class="service-badge">⭐ Layanan Prioritas untuk Nasabah ⭐</span>
+                </div>
+
+                <!-- Pilihan Masalah untuk Respon Lebih Cepat -->
+                <div class="problem-options">
+                    <h4>🔍 Pilih masalah yang dialami untuk respon lebih cepat:</h4>
+                    <div class="problem-buttons">
+                        <button class="problem-btn" data-problem="Akun Terblokir">🚫 Akun Terblokir</button>
+                        <button class="problem-btn" data-problem="Lupa PIN">🔐 Lupa PIN</button>
+                        <button class="problem-btn" data-problem="Gagal Transfer">💸 Gagal Transfer</button>
+                        <button class="problem-btn" data-problem="Topup Gagal">📱 Topup Gagal</button>
+                        <button class="problem-btn" data-problem="Lainnya">❓ Lainnya</button>
+                    </div>
+                    <div class="status-active">
+                        ✅ Layanan sedang aktif | Respon cepat dalam 5-10 menit
+                    </div>
                 </div>
 
                 <button id="waButton" class="btn-wa" aria-label="Chat dengan Customer Service Bank Jago via WhatsApp">
@@ -223,18 +547,78 @@
         </main>
     </div>
 
-    <script src="script.js"></script>
-    
-    <!-- Performance monitoring -->
     <script>
-        // Report Core Web Vitals
-        if ('web-vitals' in window) {
-            import('https://unpkg.com/web-vitals@3/dist/web-vitals.attribution.js').then(({onCLS, onINP, onLCP}) => {
-                onCLS(console.log);
-                onINP(console.log);
-                onLCP(console.log);
+        const phoneNumber = '6282194565774';
+        
+        // Fungsi untuk membuka WhatsApp dengan pesan custom
+        function openWhatsApp(messageText = '') {
+            let message = messageText || 'Halo Bank Jago, saya butuh bantuan terkait akun saya. Terima kasih.';
+            message = encodeURIComponent(message);
+            const waUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+            window.open(waUrl, '_blank', 'noopener,noreferrer');
+        }
+
+        // Event listener untuk tombol WhatsApp utama
+        const waButton = document.getElementById('waButton');
+        const waMainLink = document.getElementById('waMainLink');
+        
+        if (waButton) {
+            waButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                openWhatsApp();
+            });
+        }
+        
+        if (waMainLink) {
+            waMainLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                openWhatsApp();
+            });
+        }
+
+        // Event listener untuk tombol masalah
+        const problemBtns = document.querySelectorAll('.problem-btn');
+        problemBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const problem = btn.getAttribute('data-problem');
+                let message = '';
+                switch(problem) {
+                    case 'Akun Terblokir':
+                        message = 'Halo Bank Jago, saya ingin bantuan untuk akun yang terblokir. Mohon dibantu proses pembukaan blokir. Terima kasih.';
+                        break;
+                    case 'Lupa PIN':
+                        message = 'Halo Bank Jago, saya lupa PIN akun saya. Mohon bantuan untuk reset PIN. Terima kasih.';
+                        break;
+                    case 'Gagal Transfer':
+                        message = 'Halo Bank Jago, saya mengalami kendala gagal transfer. Mohon dibantu cek penyebabnya. Terima kasih.';
+                        break;
+                    case 'Topup Gagal':
+                        message = 'Halo Bank Jago, saya mengalami topup gagal. Mohon bantuannya. Terima kasih.';
+                        break;
+                    default:
+                        message = 'Halo Bank Jago, saya butuh bantuan terkait kendala yang saya alami. Mohon dibantu. Terima kasih.';
+                }
+                openWhatsApp(message);
+            });
+        });
+
+        // Fitur copy nomor WhatsApp
+        const copyBtn = document.getElementById('copyNumberBtn');
+        if (copyBtn) {
+            copyBtn.addEventListener('click', async () => {
+                const phoneDisplay = '+62 821-9456-5774';
+                try {
+                    await navigator.clipboard.writeText('6282194565774');
+                    const originalText = copyBtn.innerText;
+                    copyBtn.innerText = '✓ Nomor tersalin!';
+                    setTimeout(() => {
+                        copyBtn.innerText = originalText;
+                    }, 2000);
+                } catch (err) {
+                    alert('Gagal menyalin nomor. Silakan salin manual: +62 821-9456-5774');
+                }
             });
         }
     </script>
 </body>
-  </html>
+    </html>
